@@ -1,3 +1,4 @@
 
 *.ipynb
 .ipynb_checkpoints/pdfannots_scrivedits-checkpoint.py
+*.DS_Store
