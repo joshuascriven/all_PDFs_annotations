@@ -5,7 +5,6 @@
 Uses the pdfannots.py script, created by Andrew Baumann (https://github.com/0xabu/pdfannots).
 Baumann's script "extracts annotations from a PDF file in a text format for use in reviewing."
 I simply loop all PDF files in the current directory as arguments in Baumann's script, setting each output text file name to the repective PDF name.
-For this to work, set the output file name to "test.txt" in the o option (e.g., -o "test.txt")
 """
 import datetime
 import os

@@ -6,7 +6,10 @@
 cd -- "$(dirname "$BASH_SOURCE")"
 
 
-# Ignores notes and drafts by requiring underscore for inclusion
-pandoc `( ls **.md **/**.md **/**/**.md **/**/**/**.md)` -o extracted_annotations_`date +%d_%b_%Y__%H_%M_%S`.pdf --filter pandoc-citeproc --toc
+# HTML
+pandoc `( ls **.md **/**.md **/**/**.md **/**/**/**.md)` -o extracted_annotations_`date +%d_%b_%Y__%H_%M_%S`.html -s --toc
+
+# PDF
+pandoc `( ls **.md **/**.md **/**/**.md **/**/**/**.md)` -o extracted_annotations_`date +%d_%b_%Y__%H_%M_%S`.pdf --toc
 
 osascript -e 'tell application "Terminal" to close first window'
