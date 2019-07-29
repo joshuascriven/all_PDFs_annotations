@@ -15,7 +15,7 @@ from pdfminer.pdfdocument import PDFDocument, PDFNoOutlines
 from pdfminer.psparser import PSLiteralTable, PSLiteral
 import pdfminer.pdftypes as pdftypes
 import pdfminer.settings
-from pathlib import Path
+from pathlib import Path # scriven
 
 pdfminer.settings.STRICT = False
 
@@ -321,8 +321,8 @@ def prettyprint(annots, outlines, outfile, do_group, sections, wrapcol):
         # print it!
         print(msg + "\n", file=outfile)
 
-    pdfname = outfile.name
-    pdfname = pdfname.split('.md')[0].replace("_"," ")
+    pdfname = outfile.name # scriven
+    pdfname = pdfname.split('.md')[0].replace("_"," ") # scriven
     
     def printheader(name):
         # emit blank separator line if needed
@@ -330,7 +330,7 @@ def prettyprint(annots, outlines, outfile, do_group, sections, wrapcol):
             print("", file=outfile)
         else:
             printheader.called = True
-        print("### " + pdfname + " -+- " + name + "\n", file=outfile)
+        print("### " + pdfname + " -+- " + name + "\n", file=outfile) # scriven
     printheader.called = False
 
     if do_group:
